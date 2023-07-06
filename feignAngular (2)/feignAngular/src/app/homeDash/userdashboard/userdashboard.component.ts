@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class UserdashboardComponent {
   isSidenavOpen = true;
-  isNavbarOpen = false;
+ 
 
   toggleSidenav() {
     this.isSidenavOpen = !this.isSidenavOpen;
@@ -16,8 +16,10 @@ export class UserdashboardComponent {
   onSidenavToggle(event: any) {
     this.isSidenavOpen = event;
   }
-  toggleNavbar() {
-    this.isNavbarOpen = !this.isNavbarOpen;
+  isDropdownOpen = false;
+
+  toggleDropdown() {
+    this.isDropdownOpen = !this.isDropdownOpen;
   }
 
 }
