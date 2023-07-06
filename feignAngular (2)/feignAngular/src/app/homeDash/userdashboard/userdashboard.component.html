@@ -1,0 +1,84 @@
+<nav class="navbar" [ngClass]="{ 'active': isNavbarOpen }">
+    <div class="navbar-logo">
+      <a href="#">Logo</a>
+    </div>
+    <ul class="navbar-menu">
+      <button>logout</button>
+      
+    </ul>
+    <div class="navbar-toggle" (click)="toggleNavbar()">
+      <span class="toggle-icon"></span>
+    </div>
+  </nav>
+  <mat-sidenav-container>
+    <mat-sidenav mode="side" [opened]="isSidenavOpen" (openedChange)="onSidenavToggle($event)">
+      <!-- Your navigation links and content here -->
+      <div class="">
+        <button class="btn" routerLink=" ">DashBoard</button><br>
+        <button class="btn" routerLink="/homeRegistration">Home Registration</button><br>
+        <button class="btn" routerLink="/loan">Home Loan</button><br>
+        <button class="btn">Home Rent</button><br>
+        <button class="btn" routerLink="/interior">Home Interior</button><br>
+       </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <!-- Your main content here -->
+      <button mat-button (click)="toggleSidenav()">menu</button>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+<!-- <div class="app" style="display: flex; height: 100vh; overflow:scroll initial">
+    <CDBSidebar textColor="#ffffff" backgroundColor="#333333">
+        <CDBSidebarHeader [prefix]="icon" >
+            <ng-template #icon>
+                <i class="fa fa-bars fa-large"></i>
+            </ng-template>
+
+            Contrast
+        </CDBSidebarHeader>
+
+        <CDBSidebarContent>
+            <CDBSidebarMenu class="sidebar-content">
+                <CDBSidebarMenuItem link='/' icon="columns" >
+                    Dashboard
+                </CDBSidebarMenuItem>
+                <CDBSidebarMenuItem link='/tables' icon="table" >
+                    Tables
+                </CDBSidebarMenuItem>
+                <CDBSidebarMenuItem link='/profile' icon="user" >
+                    Profile
+                </CDBSidebarMenuItem>
+                <CDBSidebarMenuItem href='/404' icon="exclamation-circle" >
+                    <span style="margin-left: 5px;">404 Page</span>
+                </CDBSidebarMenuItem>
+            </CDBSidebarMenu>
+        </CDBSidebarContent>
+        <div class="mt-auto">
+
+            <!-- <CDBSidebarFooter style="text-align: center; margin-top: auto;">
+                <div class="sidebar-btn-wrapper" style="padding: 20px 5px">
+                    Sidebar Footer
+                </div>
+            </CDBSidebarFooter> 
+        </div>
+    </CDBSidebar>
+</div> -->
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <nav class="sidebar">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/profile">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/admin">Admin</a>
+                </li>
+              </ul>
+            </nav>
+        </div>
+    </div>
+</div> -->

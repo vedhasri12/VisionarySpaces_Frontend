@@ -1,0 +1,89 @@
+.mat-sidenav-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;/* Set the height to occupy the full viewport */
+}
+.mat-sidenav-content {
+  padding: 20px; /* Add some padding to the content area */
+  order: 2;
+}
+.mat-sidenav {
+  width: 240px;
+  order: 1;
+   /* Set the width of the sidenav */
+}
+@media (max-width: 768px) {
+   /* Adjust the styles for smaller screens  */
+  .mat-sidenav {
+    width: 30%;
+    order: 2; /* Make the sidenav occupy full width */
+  } 
+  .mat-sidenav-content {
+    order: 1;
+  }
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  margin-right: 10px;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+}
+
+/* Media query for responsive behavior */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+  
+  .navbar-toggle {
+    display: block;
+  }
+  
+  .navbar.active .navbar-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  .navbar.active .navbar-menu li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
